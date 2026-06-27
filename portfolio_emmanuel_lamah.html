@@ -201,6 +201,25 @@
     background: var(--surface2); border: 1px solid var(--border);
     border-radius: 4px; color: var(--text-dim);
   }
+  .project-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; }
+  .project-gh-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 11px; color: var(--text-muted);
+    padding: 5px 10px; border: 1px solid var(--border); border-radius: 4px;
+    transition: all .2s;
+  }
+  .project-gh-link:hover { border-color: var(--border-gold); color: var(--gold); }
+
+  .more-projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 40px; }
+  .more-project-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px;
+    transition: border-color .2s, transform .15s;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .more-project-card:hover { border-color: var(--border-gold); transform: translateY(-2px); }
+  .more-project-name { font-size: 15px; font-weight: 600; color: var(--text); }
+  .more-project-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; flex: 1; }
 
   /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
@@ -363,15 +382,15 @@
         and a <strong>sovereign on-premise Mistral LLM</strong> with RAG over Qdrant.
         Full DevSecOps pipeline — OWASP, SAST/DAST, RGPD/AI Act compliant.
       </p>
-      <div class="project-stack">
-        <span class="stack-tag">FastAPI</span>
-        <span class="stack-tag">React TS</span>
-        <span class="stack-tag">LangGraph</span>
-        <span class="stack-tag">Mistral</span>
-        <span class="stack-tag">Qdrant</span>
-        <span class="stack-tag">TimescaleDB</span>
-        <span class="stack-tag">Docker</span>
-        <span class="stack-tag">GitHub Actions</span>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">React TS</span>
+          <span class="stack-tag">LangGraph</span>
+          <span class="stack-tag">Mistral</span>
+          <span class="stack-tag">Qdrant</span>
+          <span class="stack-tag">Docker</span>
+        </div>
       </div>
     </div>
 
@@ -385,16 +404,100 @@
         Built to <strong>OWASP Top 10</strong> standards, with JWT auth, role management,
         and a MongoDB time-series backend. Feeds EPICO-IA with historical data.
       </p>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="stack-tag">Django</span>
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">MongoDB</span>
+          <span class="stack-tag">OWASP</span>
+          <span class="stack-tag">JWT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More projects from GitHub -->
+  <div style="margin-top: 52px;">
+    <div class="section-label" style="margin-bottom:8px">GitHub</div>
+    <h3 style="font-size:20px;font-weight:600;margin-bottom:6px;">Other Projects</h3>
+    <p style="color:var(--text-dim);font-size:14px;margin-bottom:0;">Personal and academic projects available on GitHub.</p>
+  </div>
+
+  <div class="more-projects-grid">
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/devsecops-pipeline-template" target="_blank">
+      <div class="more-project-name">DevSecOps Pipeline Template</div>
+      <p class="more-project-desc">Reusable CI/CD pipeline template integrating security gates — SAST, DAST, container scanning, and code quality checks.</p>
+      <div class="project-stack">
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">GitHub Actions</span>
+        <span class="stack-tag">SAST/DAST</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/DetectionAnomalie" target="_blank">
+      <div class="more-project-name">Détection d'Anomalies</div>
+      <p class="more-project-desc">Anomaly detection application — prototype of the ML pipeline later integrated into EPICO-IA.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+        <span class="stack-tag">ML</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/priceiq" target="_blank">
+      <div class="more-project-name">PriceIQ</div>
+      <p class="more-project-desc">Price intelligence application for tracking and analyzing product prices.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/Crud-Django-react-" target="_blank">
+      <div class="more-project-name">CRUD Django / React</div>
+      <p class="more-project-desc">Full-stack CRUD application with a Django REST API backend and a React frontend.</p>
       <div class="project-stack">
         <span class="stack-tag">Django</span>
         <span class="stack-tag">React</span>
-        <span class="stack-tag">MongoDB</span>
         <span class="stack-tag">Python</span>
-        <span class="stack-tag">OWASP</span>
-        <span class="stack-tag">JWT</span>
         <span class="stack-tag">REST API</span>
       </div>
-    </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/marketplace" target="_blank">
+      <div class="more-project-name">Marketplace</div>
+      <p class="more-project-desc">E-commerce marketplace platform built in Java.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Java</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/gestion-suivis-des-finances-" target="_blank">
+      <div class="more-project-name">Gestion Finances</div>
+      <p class="more-project-desc">Personal finance tracking and management application.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/gestion-de-garage" target="_blank">
+      <div class="more-project-name">Gestion de Garage</div>
+      <p class="more-project-desc">Garage management system for vehicle and client tracking.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card" href="https://github.com/Emmanuellamah64/tp-cuc-sel-jenkins-master" target="_blank">
+      <div class="more-project-name">CI/CD Jenkins Lab</div>
+      <p class="more-project-desc">CI/CD pipeline lab using Jenkins, Selenium, and Cucumber for automated testing.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Java</span>
+        <span class="stack-tag">Jenkins</span>
+        <span class="stack-tag">Selenium</span>
+        <span class="stack-tag">Cucumber</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
