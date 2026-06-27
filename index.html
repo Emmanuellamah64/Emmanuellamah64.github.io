@@ -307,6 +307,29 @@
   }
   .project-card:hover .stack-tag { border-color: rgba(201,168,76,.18); }
 
+  /* ── MORE PROJECTS ── */
+  .more-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .more-project-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: border-color .25s, transform .2s, box-shadow .2s;
+    display: flex; flex-direction: column; gap: 10px;
+    color: var(--text);
+  }
+  .more-project-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    color: var(--text);
+  }
+  .more-project-name { font-size: 14px; font-weight: 600; }
+  .more-project-desc { font-size: 13px; color: var(--text-dim); line-height: 1.65; flex: 1; }
+
   /* ── SKILLS ── */
   .skills-grid {
     display: grid;
@@ -602,6 +625,91 @@
         <span class="stack-tag">REST API</span>
       </div>
     </div>
+  </div>
+
+  <!-- Other GitHub Projects -->
+  <div style="margin-top:60px">
+    <div class="eyebrow reveal" style="margin-bottom:10px">
+      <span class="eyebrow-num">—</span>
+      <span class="eyebrow-label">GitHub</span>
+    </div>
+    <h3 class="reveal" style="font-size:20px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em;">Other Projects</h3>
+    <p class="reveal" style="color:var(--text-dim);font-size:14px;margin-bottom:0;">Personal and academic projects available on GitHub.</p>
+  </div>
+
+  <div class="more-projects-grid">
+
+    <a class="more-project-card reveal reveal-d1" href="https://github.com/Emmanuellamah64/devsecops-pipeline-template" target="_blank" rel="noopener">
+      <div class="more-project-name">DevSecOps Pipeline Template</div>
+      <p class="more-project-desc">Reusable CI/CD pipeline template integrating security gates — SAST, DAST, container scanning, and code quality checks.</p>
+      <div class="project-stack">
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">GitHub Actions</span>
+        <span class="stack-tag">SAST/DAST</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d2" href="https://github.com/Emmanuellamah64/DetectionAnomalie" target="_blank" rel="noopener">
+      <div class="more-project-name">Détection d'Anomalies</div>
+      <p class="more-project-desc">Anomaly detection application — prototype of the ML pipeline later integrated into EPICO-IA.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+        <span class="stack-tag">ML</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d3" href="https://github.com/Emmanuellamah64/priceiq" target="_blank" rel="noopener">
+      <div class="more-project-name">PriceIQ</div>
+      <p class="more-project-desc">Price intelligence application for tracking and analyzing product prices.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d1" href="https://github.com/Emmanuellamah64/Crud-Django-react-" target="_blank" rel="noopener">
+      <div class="more-project-name">CRUD Django / React</div>
+      <p class="more-project-desc">Full-stack CRUD application with a Django REST API backend and a React frontend.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Django</span>
+        <span class="stack-tag">React</span>
+        <span class="stack-tag">Python</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d2" href="https://github.com/Emmanuellamah64/marketplace" target="_blank" rel="noopener">
+      <div class="more-project-name">Marketplace</div>
+      <p class="more-project-desc">E-commerce marketplace platform built in Java.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Java</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d3" href="https://github.com/Emmanuellamah64/gestion-suivis-des-finances-" target="_blank" rel="noopener">
+      <div class="more-project-name">Gestion Finances</div>
+      <p class="more-project-desc">Personal finance tracking and management application.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d1" href="https://github.com/Emmanuellamah64/gestion-de-garage" target="_blank" rel="noopener">
+      <div class="more-project-name">Gestion de Garage</div>
+      <p class="more-project-desc">Garage management system for vehicle and client tracking.</p>
+      <div class="project-stack">
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </a>
+
+    <a class="more-project-card reveal reveal-d2" href="https://github.com/Emmanuellamah64/tp-cuc-sel-jenkins-master" target="_blank" rel="noopener">
+      <div class="more-project-name">CI/CD Jenkins Lab</div>
+      <p class="more-project-desc">CI/CD pipeline lab using Jenkins, Selenium, and Cucumber for automated testing.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Java</span>
+        <span class="stack-tag">Jenkins</span>
+        <span class="stack-tag">Selenium</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
